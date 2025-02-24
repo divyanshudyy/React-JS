@@ -1,5 +1,11 @@
+import Heading from "./Heading";
+
 function App() {
-  return <h1>React</h1>;
+  return (
+    <>
+      <Heading />
+    </>
+  );
 }
 
 export default App;
