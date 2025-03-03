@@ -22,7 +22,7 @@ function Button() {
 
   return (
     <>
-      <h4>Counter Value: {counter}</h4>
+      <h4 className="text-center">Counter Value: {counter}</h4>
       <button onClick={addValue1}>Add Value by 1</button>
       &nbsp;&nbsp;&nbsp;
       <button onClick={addValue2}>Add Value by 4</button>
