@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Ludo from "./components/Ludo";
 import Todo from "./components/Todo";
+import Lottery from "./components/Lottery";
 
 function App() {
   let [counter, setCounter] = useState(12);
@@ -24,6 +25,7 @@ function App() {
       <button onClick={removeValue}>Remove Value {counter}</button>
       <Ludo />
       <Todo />
+      <Lottery />
     </>
   );
 }
