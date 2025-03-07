@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { genTicket, sum } from "../helper";
 
+// State
 export default function Lottery() {
   const [ticket, setTicket] = useState(genTicket(3));
   let isWinning = sum(ticket) === 15;
