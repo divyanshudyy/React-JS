@@ -1,6 +1,8 @@
 // STATE WITH HOOKS
 
 import { useState } from "react";
+import Ludo from "./components/Ludo";
+import Todo from "./components/Todo";
 
 function App() {
   let [counter, setCounter] = useState(12);
@@ -20,6 +22,8 @@ function App() {
       <p>Counter Value = {counter} </p>
       <button onClick={addValue}>Add Value {counter}</button>
       <button onClick={removeValue}>Remove Value {counter}</button>
+      <Ludo />
+      <Todo />
     </>
   );
 }

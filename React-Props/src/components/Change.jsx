@@ -2,7 +2,7 @@ import { useState } from "react";
 import React from "react";
 
 function Change() {
-  const [color, setColor] = useState("Green");
+  const [color, setColor] = useState("Black");
 
   return (
     <>
