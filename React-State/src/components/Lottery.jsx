@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { genTicket, sum } from "../helper";
 import Ticket from "./Ticket";
+import PropTypes from "prop-types";
 
 // State
-export default function Lottery({n = 3, winningSum = 15}) {
+export default function Lottery({ n = 3, winningSum = 15 }) {
   const [ticket, setTicket] = useState(genTicket(n));
   let isWinning = sum(ticket) === winningSum;
 
@@ -22,3 +23,8 @@ export default function Lottery({n = 3, winningSum = 15}) {
     </div>
   );
 }
+
+Lottery.propTypes = {
+  n: PropTypes.number.isRequired,
+  winningSum: PropTypes.number.isRequired,
+};

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import TicketNum from "./TicketNum";
 
 function Ticket({ ticket }) {
@@ -11,3 +12,7 @@ function Ticket({ ticket }) {
 }
 
 export default Ticket;
+
+Ticket.propTypes = {
+  ticket: PropTypes.arrayOf(PropTypes.number).isRequired,
+};
