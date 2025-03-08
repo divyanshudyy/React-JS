@@ -1,5 +1,5 @@
 // STATE WITH HOOKS
-// 
+//
 
 import { useState } from "react";
 import Ludo from "./components/Ludo";
@@ -26,7 +26,7 @@ function App() {
       <button onClick={removeValue}>Remove Value {counter}</button>
       <Ludo />
       <Todo />
-      <Lottery />
+      <Lottery n={3} winningSum={15} />
     </>
   );
 }
