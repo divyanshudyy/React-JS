@@ -1,12 +1,12 @@
 import Form from "./Forms";
-import RatingForm from "./RatingForm";
+import CommentForm from "./CommentForm";
 import "./App.css";
 
 function App() {
   return (
     <>
       <Form />
-      <RatingForm />
+      <CommentForm />
     </>
   );
 }
