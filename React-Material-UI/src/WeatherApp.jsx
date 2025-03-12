@@ -13,11 +13,15 @@ export default function WeatherApp() {
     description: "Clear",
   });
 
+  function updateWeather(update) {
+    setWeather(update);
+  }
+
   return (
     <>
       <div className="h-full w-full flex flex-col justify-center items-center text-5xl font-bold font-sans text-red-950">
         <h1>Weather App</h1>
-        <SearchBox />
+        <SearchBox updateWeather={updateWeather} />
         <InfoBox weather={weather} />
       </div>
     </>
