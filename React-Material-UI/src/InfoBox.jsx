@@ -2,18 +2,28 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { useState } from "react";
 
 export default function InfoBox({ weather }) {
-  const IMG_URL =
-    "https://images.unsplash.com/photo-1741557571786-e922da981949?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+  const HOT_URL =
+    "https://images.unsplash.com/photo-1535304902304-466bec5bf8e7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+  const COLD_URL =
+    "https://images.unsplash.com/photo-1485962927012-fc4fd446a24d?q=80&w=2032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+  const RAIN_URL =
+    "https://images.unsplash.com/photo-1623567932970-576132e5d056?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         component="img"
         alt="green iguana"
         height="140"
-        image={IMG_URL}
+        image={
+          weather.humidity > 80
+            ? RAIN_URL
+            : weather.temp > 25
+            ? HOT_URL
+            : COLD_URL
+        }
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">

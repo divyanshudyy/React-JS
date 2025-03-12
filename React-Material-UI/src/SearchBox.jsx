@@ -20,7 +20,7 @@ export default function SearchBox({ updateWeather }) {
       const result = await weatherResponse.json();
 
       let weatherInfo = {
-        city: result.name,
+        city: city,
         temp: result.main.temp,
         maxTemp: result.main.temp_max,
         minTemp: result.main.temp_min,
