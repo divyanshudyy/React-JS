@@ -15,7 +15,8 @@ export default function TodoForm() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" onChange={handleChange} />
+      <input type="text" onChange={handleChange} value={task} />
+      &nbsp;&nbsp;
       <button>Add Task</button>
     </form>
   );
